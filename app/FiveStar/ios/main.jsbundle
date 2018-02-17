@@ -1295,7 +1295,7 @@ babelHelpers.toConsumableArray = function (arr) {
 __d(/* ReactNativeARKit/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/index.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/index.js';
 
 var _reactNativeArkit = require(12                  ); // 12 = react-native-arkit
 
@@ -1400,7 +1400,7 @@ var ReactNativeARKit = function (_Component) {
         _reactNative.View,
         { style: { flex: 1 }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 58
+            lineNumber: 61
           }
         },
         _react2.default.createElement(
@@ -1413,17 +1413,18 @@ var ReactNativeARKit = function (_Component) {
             onPlaneDetected: console.log,
             onPlaneUpdate: console.log, __source: {
               fileName: _jsxFileName,
-              lineNumber: 59
+              lineNumber: 62
             }
           },
           _react2.default.createElement(_reactNativeArkit.ARKit.Plane, {
             id: 'object_9',
+            frame: 'FrontOfCamera',
             position: { x: 0, y: 0, z: 0 },
             shape: { width: 0.1, height: 0.1 },
-            material: { diffuse: 'white', colorBufferWriteMask: _reactNativeArkit.ARKit.ColorMask.alpha },
+            color: 'rgba(255, 255, 255, 0.4)',
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 74
+              lineNumber: 77
             }
           }),
           _react2.default.createElement(_reactNativeArkit.ARKit.Text, {
@@ -1435,7 +1436,7 @@ var ReactNativeARKit = function (_Component) {
             material: { diffuse: diffuse },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 80
+              lineNumber: 86
             }
           }),
           _react2.default.createElement(_reactNativeArkit.ARKit.Text, {
@@ -1446,7 +1447,7 @@ var ReactNativeARKit = function (_Component) {
             material: { diffuse: 'blue' },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 88
+              lineNumber: 94
             }
           }),
           _react2.default.createElement(PlaneCursor, {
@@ -1460,7 +1461,7 @@ var ReactNativeARKit = function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 97
+              lineNumber: 103
             }
           }),
           _react2.default.createElement(ObjectCursor, {
@@ -1477,7 +1478,7 @@ var ReactNativeARKit = function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 105
+              lineNumber: 111
             }
           })
         )
@@ -29881,7 +29882,7 @@ module.exports = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactDebugTo
 __d(/* ActivityIndicator */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
 var Platform = require(55        ); // 55 = Platform
@@ -30036,7 +30037,7 @@ module.exports = require(134                ); // 134 = UnimplementedView
 __d(/* UnimplementedView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js';
 var React = require(135    ); // 135 = React
 var StyleSheet = require(136         ); // 136 = StyleSheet
 
@@ -31261,7 +31262,7 @@ module.exports = StyleSheetValidation;
 __d(/* View */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/View/View.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/View/View.js';
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
 var Platform = require(55        ); // 55 = Platform
 var PropTypes = require(14          ); // 14 = prop-types
@@ -32580,7 +32581,7 @@ module.exports = verifyPropTypes;
 __d(/* ReactNativeART */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/ART/ReactNativeART.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/ART/ReactNativeART.js';
 var Color = require(180             ); // 180 = art/core/color
 var Path = require(181                  ); // 181 = ARTSerializablePath
 var Transform = require(184                 ); // 184 = art/core/transform
@@ -33929,7 +33930,7 @@ module.exports = Class({
 __d(/* Button */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Button.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Button.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var Platform = require(55        ); // 55 = Platform
 var React = require(135    ); // 135 = React
@@ -34076,7 +34077,7 @@ module.exports = Button;
 __d(/* Text */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Text/Text.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Text/Text.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var EdgeInsetsPropType = require(157                 ); // 157 = EdgeInsetsPropType
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
@@ -34315,7 +34316,7 @@ __d(/* Touchable */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Touchable/Touchable.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Touchable/Touchable.js';
 var BoundingDimensions = require(188                 ); // 188 = BoundingDimensions
 var Platform = require(55        ); // 55 = Platform
 var Position = require(190       ); // 190 = Position
@@ -34968,7 +34969,7 @@ __d(/* TouchableNativeFeedback */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Touchable/TouchableNativeFeedback.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Touchable/TouchableNativeFeedback.ios.js';
 var React = require(135    ); // 135 = React
 var StyleSheet = require(136         ); // 136 = StyleSheet
 var Text = require(186   ); // 186 = Text
@@ -35029,7 +35030,7 @@ module.exports = DummyTouchableNativeFeedback;
 __d(/* TouchableOpacity */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js';
 
 
 var Animated = require(196       ); // 196 = Animated
@@ -38594,7 +38595,7 @@ module.exports = function bezier(mX1, mY1, mX2, mY2) {
 __d(/* createAnimatedComponent */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Animated/src/createAnimatedComponent.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Animated/src/createAnimatedComponent.js';
 
 var _require = require(198              ), // 198 = ./AnimatedEvent
     AnimatedEvent = _require.AnimatedEvent;
@@ -38763,7 +38764,7 @@ module.exports = createAnimatedComponent;
 __d(/* Image */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Image/Image.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Image/Image.ios.js';
 var EdgeInsetsPropType = require(157                 ); // 157 = EdgeInsetsPropType
 var ImageResizeMode = require(142              ); // 142 = ImageResizeMode
 var ImageSourcePropType = require(225                  ); // 225 = ImageSourcePropType
@@ -38934,7 +38935,7 @@ module.exports = ImageSourcePropType;
 __d(/* ScrollView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js';
 var Animated = require(196       ); // 196 = Animated
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var EdgeInsetsPropType = require(157                 ); // 157 = EdgeInsetsPropType
@@ -39801,7 +39802,7 @@ module.exports = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactNativeC
 __d(/* ScrollViewStickyHeader */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js';
 var Animated = require(196       ); // 196 = Animated
 var React = require(135    ); // 135 = React
 var StyleSheet = require(136         ); // 136 = StyleSheet
@@ -40157,7 +40158,7 @@ module.exports = require(134                ); // 134 = UnimplementedView
 __d(/* DatePickerIOS */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.ios.js';
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
 var React = require(135    ); // 135 = React
 var PropTypes = require(14          ); // 14 = prop-types
@@ -40277,7 +40278,7 @@ module.exports = require(134                ); // 134 = UnimplementedView
 __d(/* FlatList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Lists/FlatList.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Lists/FlatList.js';
 var MetroListView = require(244            ); // 244 = MetroListView
 var React = require(135    ); // 135 = React
 var View = require(154   ); // 154 = View
@@ -40558,7 +40559,7 @@ module.exports = FlatList;
 __d(/* MetroListView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Lists/MetroListView.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Lists/MetroListView.js';
 var ListView = require(245       ); // 245 = ListView
 var React = require(135    ); // 135 = React
 var RefreshControl = require(250             ); // 250 = RefreshControl
@@ -40748,7 +40749,7 @@ module.exports = MetroListView;
 __d(/* ListView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Lists/ListView/ListView.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Lists/ListView/ListView.js';
 var ListViewDataSource = require(246                 ); // 246 = ListViewDataSource
 var Platform = require(55        ); // 55 = Platform
 var React = require(135    ); // 135 = React
@@ -41546,7 +41547,7 @@ module.exports = cloneReferencedElement;
 __d(/* RefreshControl */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
 var Platform = require(55        ); // 55 = Platform
@@ -41641,7 +41642,7 @@ module.exports = RefreshControl;
 __d(/* VirtualizedList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Lists/VirtualizedList.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Lists/VirtualizedList.js';
 var Batchinator = require(252          ); // 252 = Batchinator
 var FillRateHelper = require(253             ); // 253 = FillRateHelper
 var PropTypes = require(14          ); // 14 = prop-types
@@ -43255,7 +43256,7 @@ module.exports = VirtualizeUtils;
 __d(/* ImageBackground */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Image/ImageBackground.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Image/ImageBackground.js';
 var Image = require(224    ); // 224 = Image
 var React = require(135    ); // 135 = React
 var StyleSheet = require(136         ); // 136 = StyleSheet
@@ -43408,7 +43409,7 @@ module.exports = ImageStore;
 __d(/* KeyboardAvoidingView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js';
 var createReactClass = require(166                 ); // 166 = create-react-class
 var Keyboard = require(230       ); // 230 = Keyboard
 var LayoutAnimation = require(261              ); // 261 = LayoutAnimation
@@ -43687,7 +43688,7 @@ var LayoutAnimation = {
 
 module.exports = LayoutAnimation;
 }, 261, null, "LayoutAnimation");
-__d(/* MaskedViewIOS */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/MaskedView/MaskedViewIOS.ios.js';
+__d(/* MaskedViewIOS */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/MaskedView/MaskedViewIOS.ios.js';
 
 
 var PropTypes = require(14          ); // 14 = prop-types
@@ -43780,7 +43781,7 @@ module.exports = MaskedViewIOS;
 __d(/* Modal */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Modal/Modal.js',
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Modal/Modal.js',
     _container;
 
 var AppContainer = require(264           ); // 264 = AppContainer
@@ -43968,7 +43969,7 @@ __d(/* AppContainer */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/ReactNative/AppContainer.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/ReactNative/AppContainer.js';
 var EmitterSubscription = require(87                   ); // 87 = EmitterSubscription
 var PropTypes = require(14          ); // 14 = prop-types
 var RCTDeviceEventEmitter = require(92                     ); // 92 = RCTDeviceEventEmitter
@@ -44120,7 +44121,7 @@ __d(/* Inspector */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/Inspector.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/Inspector.js';
 var Dimensions = require(138         ); // 138 = Dimensions
 var InspectorOverlay = require(266               ); // 266 = InspectorOverlay
 var InspectorPanel = require(270             ); // 270 = InspectorPanel
@@ -44404,7 +44405,7 @@ module.exports = Inspector;
 __d(/* InspectorOverlay */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js';
 var Dimensions = require(138         ); // 138 = Dimensions
 var ElementBox = require(267         ); // 267 = ElementBox
 var PropTypes = require(14          ); // 14 = prop-types
@@ -44495,7 +44496,7 @@ module.exports = InspectorOverlay;
 __d(/* ElementBox */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/ElementBox.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/ElementBox.js';
 var React = require(135    ); // 135 = React
 var View = require(154   ); // 154 = View
 var StyleSheet = require(136         ); // 136 = StyleSheet
@@ -44591,7 +44592,7 @@ module.exports = ElementBox;
 __d(/* BorderBox */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/BorderBox.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/BorderBox.js';
 var React = require(135    ); // 135 = React
 var View = require(154   ); // 154 = View
 
@@ -44675,7 +44676,7 @@ module.exports = resolveBoxStyle;
 __d(/* InspectorPanel */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/InspectorPanel.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/InspectorPanel.js';
 var ElementProperties = require(271                ); // 271 = ElementProperties
 var NetworkOverlay = require(278             ); // 278 = NetworkOverlay
 var PerformanceOverlay = require(281                 ); // 281 = PerformanceOverlay
@@ -44915,7 +44916,7 @@ module.exports = InspectorPanel;
 __d(/* ElementProperties */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/ElementProperties.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/ElementProperties.js';
 var BoxInspector = require(272           ); // 272 = BoxInspector
 var PropTypes = require(14          ); // 14 = prop-types
 var React = require(135    ); // 135 = React
@@ -45135,7 +45136,7 @@ module.exports = ElementProperties;
 __d(/* BoxInspector */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/BoxInspector.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/BoxInspector.js';
 var React = require(135    ); // 135 = React
 var StyleSheet = require(136         ); // 136 = StyleSheet
 var Text = require(186   ); // 186 = Text
@@ -45352,7 +45353,7 @@ module.exports = BoxInspector;
 __d(/* StyleInspector */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/StyleInspector.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/StyleInspector.js';
 var React = require(135    ); // 135 = React
 var StyleSheet = require(136         ); // 136 = StyleSheet
 var Text = require(186   ); // 186 = Text
@@ -45467,7 +45468,7 @@ module.exports = StyleInspector;
 __d(/* TouchableHighlight */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
 var PropTypes = require(14          ); // 14 = prop-types
@@ -45737,7 +45738,7 @@ module.exports = openFileInEditor;
 __d(/* NetworkOverlay */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js';
 var ListView = require(245       ); // 245 = ListView
 var React = require(135    ); // 135 = React
 var ScrollView = require(226         ); // 226 = ScrollView
@@ -46666,7 +46667,7 @@ module.exports = XHRInterceptor;
 __d(/* PerformanceOverlay */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js';
 var PerformanceLogger = require(115                ); // 115 = PerformanceLogger
 var React = require(135    ); // 135 = React
 var StyleSheet = require(136         ); // 136 = StyleSheet
@@ -46760,7 +46761,7 @@ __d(/* YellowBox */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/ReactNative/YellowBox.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/ReactNative/YellowBox.js';
 var EventEmitter = require(89            ); // 89 = EventEmitter
 var Platform = require(55        ); // 55 = Platform
 var React = require(135    ); // 135 = React
@@ -47423,7 +47424,7 @@ var styles = StyleSheet.create({
 
 module.exports = YellowBox;
 }, 282, null, "YellowBox");
-__d(/* SafeAreaView */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/SafeAreaView/SafeAreaView.ios.js';
+__d(/* SafeAreaView */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/SafeAreaView/SafeAreaView.ios.js';
 
 
 var React = require(135    ); // 135 = React
@@ -47477,7 +47478,7 @@ module.exports = I18nManager;
 __d(/* NavigatorIOS */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Navigation/NavigatorIOS.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Navigation/NavigatorIOS.ios.js';
 var EventEmitter = require(89            ); // 89 = EventEmitter
 var Image = require(224    ); // 224 = Image
 var RCTNavigatorManager = require(27             ).NavigatorManager; // 27 = NativeModules
@@ -48028,7 +48029,7 @@ __d(/* Picker */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Picker/Picker.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Picker/Picker.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var PickerIOS = require(288        ); // 288 = PickerIOS
 var PickerAndroid = require(289            ); // 289 = PickerAndroid
@@ -48153,7 +48154,7 @@ module.exports = Picker;
 __d(/* PickerIOS */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Picker/PickerIOS.ios.js',
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Picker/PickerIOS.ios.js',
     _class,
     _temp;
 
@@ -48301,7 +48302,7 @@ module.exports = require(134                ); // 134 = UnimplementedView
 __d(/* ProgressViewIOS */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.ios.js';
 var Image = require(224    ); // 224 = Image
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
 var React = require(135    ); // 135 = React
@@ -48354,7 +48355,7 @@ module.exports = ProgressViewIOS;
 __d(/* SectionList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Lists/SectionList.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Lists/SectionList.js';
 var MetroListView = require(244            ); // 244 = MetroListView
 var Platform = require(55        ); // 55 = Platform
 var React = require(135    ); // 135 = React
@@ -48447,7 +48448,7 @@ module.exports = SectionList;
 __d(/* VirtualizedSectionList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js';
 var React = require(135    ); // 135 = React
 var View = require(154   ); // 154 = View
 var VirtualizedList = require(251              ); // 251 = VirtualizedList
@@ -48845,7 +48846,7 @@ module.exports = VirtualizedSectionList;
 __d(/* SegmentedControlIOS */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.ios.js';
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
 var React = require(135    ); // 135 = React
 var PropTypes = require(14          ); // 14 = prop-types
@@ -48915,7 +48916,7 @@ module.exports = SegmentedControlIOS;
 __d(/* Slider */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Slider/Slider.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Slider/Slider.js';
 var Image = require(224    ); // 224 = Image
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
@@ -49051,7 +49052,7 @@ module.exports = Slider;
 __d(/* SnapshotViewIOS */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/RCTTest/SnapshotViewIOS.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/RCTTest/SnapshotViewIOS.ios.js';
 var React = require(135    ); // 135 = React
 var PropTypes = require(14          ); // 14 = prop-types
 var StyleSheet = require(136         ); // 136 = StyleSheet
@@ -49125,7 +49126,7 @@ module.exports = SnapshotViewIOS;
 __d(/* Switch */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/Switch/Switch.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/Switch/Switch.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var NativeMethodsMixin = require(132                 ); // 132 = NativeMethodsMixin
 var Platform = require(55        ); // 55 = Platform
@@ -49452,7 +49453,7 @@ module.exports = StatusBar;
 __d(/* SwipeableFlatList */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableFlatList.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableFlatList.js';
 
 
 var PropTypes = require(14          ); // 14 = prop-types
@@ -49607,7 +49608,7 @@ module.exports = SwipeableFlatList;
 __d(/* SwipeableRow */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableRow.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableRow.js';
 var Animated = require(196       ); // 196 = Animated
 var I18nManager = require(284          ); // 284 = I18nManager
 var PanResponder = require(300           ); // 300 = PanResponder
@@ -50064,7 +50065,7 @@ module.exports = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.TouchHistory
 __d(/* SwipeableListView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js';
 var ListView = require(245       ); // 245 = ListView
 var PropTypes = require(14          ); // 14 = prop-types
 var React = require(135    ); // 135 = React
@@ -50318,7 +50319,7 @@ module.exports = SwipeableListViewDataSource;
 __d(/* TabBarIOS */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.ios.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var React = require(135    ); // 135 = React
 var PropTypes = require(14          ); // 14 = prop-types
@@ -50394,7 +50395,7 @@ module.exports = TabBarIOS;
 __d(/* TabBarItemIOS */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.ios.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var Image = require(224    ); // 224 = Image
 var React = require(135    ); // 135 = React
@@ -50524,7 +50525,7 @@ module.exports = TabBarItemIOS;
 __d(/* TextInput */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/TextInput/TextInput.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/TextInput/TextInput.js';
 var ColorPropType = require(131            ); // 131 = ColorPropType
 var DocumentSelectionState = require(307                     ); // 307 = DocumentSelectionState
 var EventEmitter = require(89            ); // 89 = EventEmitter
@@ -51518,7 +51519,7 @@ module.exports = require(134                ); // 134 = UnimplementedView
 __d(/* WebView */function(global, require, module, exports) {
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js';
 var ActivityIndicator = require(130                ); // 130 = ActivityIndicator
 var EdgeInsetsPropType = require(157                 ); // 157 = EdgeInsetsPropType
 var React = require(135    ); // 135 = React
@@ -52235,7 +52236,7 @@ __d(/* renderApplication */function(global, require, module, exports) {
 
 'use strict';
 
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native/Libraries/ReactNative/renderApplication.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native/Libraries/ReactNative/renderApplication.js';
 var AppContainer = require(264           ); // 264 = AppContainer
 var React = require(135    ); // 135 = React
 var ReactNative = require(33           ); // 33 = ReactNative
@@ -56149,7 +56150,7 @@ var ARCylinder = (0, _createArComponent2.default)('addCylinder', {
 
 module.exports = ARCylinder;
 }, 487, null, "react-native-arkit/components/ARCylinder.js");
-__d(/* react-native-arkit/components/ARGroup.js */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native-arkit/components/ARGroup.js';
+__d(/* react-native-arkit/components/ARGroup.js */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native-arkit/components/ARGroup.js';
 
 var _reactNative = require(25            ); // 25 = react-native
 
@@ -56185,7 +56186,7 @@ var ARGroup = function (_Component) {
 
 module.exports = ARGroup;
 }, 488, null, "react-native-arkit/components/ARGroup.js");
-__d(/* react-native-arkit/ARKit.js */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native-arkit/ARKit.js';
+__d(/* react-native-arkit/ARKit.js */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native-arkit/ARKit.js';
 
 var _propTypes = require(14          ); // 14 = prop-types
 
@@ -56572,7 +56573,7 @@ var ARSphere = (0, _createArComponent2.default)('addSphere', {
 
 module.exports = ARSphere;
 }, 495, null, "react-native-arkit/components/ARSphere.js");
-__d(/* react-native-arkit/components/ARSprite.js */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native-arkit/components/ARSprite.js';
+__d(/* react-native-arkit/components/ARSprite.js */function(global, require, module, exports) {var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native-arkit/components/ARSprite.js';
 
 var _react = require(47     ); // 47 = react
 
@@ -59204,7 +59205,7 @@ module.exports = DeviceMotion;
 __d(/* react-native-arkit/hocs/withProjectedPosition.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/native_app/FiveStar/node_modules/react-native-arkit/hocs/withProjectedPosition.js';
+var _jsxFileName = '/Users/Rahul/GoogleDrive/Personal_Projects/FiveStar/app/FiveStar/node_modules/react-native-arkit/hocs/withProjectedPosition.js';
 
 var _react = require(47     ); // 47 = react
 
