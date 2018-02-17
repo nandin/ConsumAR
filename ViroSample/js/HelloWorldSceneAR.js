@@ -31,6 +31,7 @@ export default class HelloWorldSceneAR extends Component {
       <ViroARScene onTrackingInitialized={this._onInitialized} >
 
 
+
         <ViroFlexView style={{flexDirection: 'column', padding: .1}}
               width={5.0} height={5.0}
               position={[-5.0, 0.0, -2.0]}
@@ -48,13 +49,14 @@ export default class HelloWorldSceneAR extends Component {
                   onTap={this._onButtonTap}
                   onGaze={this._onButtonGaze />
         </ViroFlexView>
+
       </ViroARScene>
     );
   }
 
   _onInitialized() {
     this.setState({
-      text : "Hello World!"
+      text : ""
     });
   }
 
