@@ -53,7 +53,10 @@ const ObjectCursor = withProjectedPosition()(({ positionProjected }) => {
 const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
 export default class ReactNativeARKit extends Component {
+
   render() {
+    // var color = ARKit.ColorMask;
+    // color.Alpha="0.7";
     return (
       <View style={{ flex: 1 }}>
         <ARKit
@@ -73,9 +76,12 @@ export default class ReactNativeARKit extends Component {
 
         <ARKit.Plane
           id="object_9"
+          frame="FrontOfCamera"
           position={{ x: 0, y: 0, z: 0 }}
           shape={{ width: 0.1, height: 0.1 }}
-          material={{ diffuse: 'white', colorBufferWriteMask: ARKit.ColorMask.alpha{{0.5}}}}
+          color= {'rgba(255, 255, 255, 0.4)'}
+          // material={{colorBufferWriteMask: 15}}
+          // model={{alpha:0.5}}
         />
         <ARKit.Text
           id="object_11"
