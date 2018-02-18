@@ -15,11 +15,6 @@ import {
 } from 'react-viro';
 import { SafeAreaView, StackNavigator } from 'react-navigation';
 
-{/*const App = StackNavigator({
-  Login: { screen: LoginScreen },
-  Orders: { screen: CamScreen },
-});*/}
-
 export default class HelloWorldSceneAR extends Component {
 
   constructor() {
