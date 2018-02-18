@@ -88,7 +88,7 @@ export default class HelloWorldSceneAR extends Component {
       }
       if(objectTag == "close")
       {
-
+        
       }
   }
   _onTouch(state, touchPos, source)  {
