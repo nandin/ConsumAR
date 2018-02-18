@@ -1,22 +1,5 @@
-'use strict';
-
 import React, { Component } from 'react';
-
-import {StyleSheet} from 'react-native';
-
-import {
-  ViroARScene,
-  ViroSurface,
-  ViroText,
-  ViroMaterials,
-  ViroBox,
-} from 'react-viro';
-import { SafeAreaView, StackNavigator } from 'react-navigation';
-
-const App = StackNavigator({
-  Login: { screen: LoginScreen },
-  Orders: { screen: CamScreen },
-});
+import { AppRegistry, FlatList, StyleSheet, Text, View } from 'react-native';
 
 export default class HelloWorldSceneAR extends Component {
 
@@ -49,21 +32,3 @@ export default class HelloWorldSceneAR extends Component {
   }
 
 }
-
-var styles = StyleSheet.create({
-  helloWorldTextStyle: {
-    fontFamily: 'Arial',
-    fontSize: 30,
-    color: '#ffffff',
-    textAlignVertical: 'center',
-    textAlign: 'center',
-  },
-});
-ViroMaterials.createMaterials({
-  earth: {
-    shininess: 2.0,
-    lightingModel: "Constant",
-  }
-});
-
-module.exports = HelloWorldSceneAR;
