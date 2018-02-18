@@ -8,11 +8,12 @@ import {
   ViroARScene,
   ViroSurface,
   ViroText,
+  ViroFlexView,
+  ViroButton,
   ViroMaterials,
   ViroBox,
 } from 'react-viro';
 import { SafeAreaView, StackNavigator } from 'react-navigation';
-
 
 export default class HelloWorldSceneAR extends Component {
 
@@ -32,25 +33,30 @@ export default class HelloWorldSceneAR extends Component {
     return (
       <ViroARScene onTrackingInitialized={this._onInitialized} >
 
-
-
-        <ViroFlexView style={{flexDirection: 'column', padding: .1}}
-              width={5.0} height={5.0}
-              position={[-5.0, 0.0, -2.0]}
-              rotation={[0, 30, 0]} >
-              <ViroText text={this.state.text} scale={[.3, .3, .3]} position={[0, 0, -2.4]} style={{fontFamily:"Helvetica", fontSize:30, color:"#000000"}} opacity={1.0} rotation={[0,30,0]}/>
-              <ViroSurface height={0.4} width={0.4} materials={["earth"]} position={[0,0,-2.5]} opacity={0.6} rotation={[0,30,0]}/>
-              <ViroButton
-                  source={require("./res/button_base.jpg")}
-                  gazeSource={require("./res/button_on_gazing.jpg")}
-                  tapSource={require("./res/button_on_tap_pressed.jpg")}
-                  position={[1, 3, -5]}
-                  rotation={[0, 30, 0]}
-                  height={2}
-                  width={3}
-                  onTap={this._onButtonTap}
-                  onGaze={this._onButtonGaze />
-        </ViroFlexView>
+        <ViroText text={this.state.text} scale={[.3, .3, .3]} position={[0, 0, -1.0]} style={{fontFamily:"Helvetica", fontSize:30, color:"#000000"}} opacity={1.0} rotation={[0,-30,0]} visible=false/>
+        <ViroSurface height={0.4} width={0.4} materials={["earth"]} position={[0,0,-1.1]} opacity={0.6} rotation={[0,-30,0]} visible=false/>
+        <ViroButton
+            source={require("./res/button.jpg")}
+            hoverSource={require("./res/hovered.jpg")}
+            clickSource={require("./res/clicked.jpg")}
+            position={[0.0, -0.13, -1.0]}
+            rotation={[0, -30, 0]}
+            height={0.2}
+            width={0.3}
+            onTap={this._onButtonTap("buy")}
+            onGaze={this._onButtonGaze} />
+            visible=false
+        <ViroButton
+            source={require("./res/button.jpg")}
+            hoverSource={require("./res/hovered.jpg")}
+            clickSource={require("./res/clicked.jpg")}
+            position={[0.0, -0.13, -1.0]}
+            rotation={[0, -30, 0]}
+            height={0.2}
+            width={0.3}
+            onTap={this._onButtonTap("close")}
+            onGaze={this._onButtonGaze} />
+            visible=false
 
       </ViroARScene>
     );
@@ -61,20 +67,36 @@ export default class HelloWorldSceneAR extends Component {
       text : ""
     });
   }
-
-}
-.....
-//outside of render method
-  _onButtonGaze() {
+  //outside of render method
+  _onButtonGaze(objectTag) {
       this.setState({
           buttonStateTag: "onGaze"
       });
-  },
-  _onButtonTap() {
+  }
+  _onButtonTap(objectTag) {
       this.setState({
           buttonStateTag: "onTap"
       });
+      if(objectTag == "buy")
+      {
+        //server call
+      }
+      if(objectTag == "close")
+      {
+
+      }
   }
+  _onTouch(state, touchPos, source)  {
+   var touchX = touchPos[0];
+   var touchY = touchPos[1];
+    if(state == 1) {
+      this.setState({
+
+      })
+    }
+  }
+
+
 
 var styles = StyleSheet.create({
   helloWorldTextStyle: {
