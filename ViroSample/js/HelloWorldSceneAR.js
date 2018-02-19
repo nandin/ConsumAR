@@ -1,104 +1,60 @@
 'use strict';
 
 import React, { Component } from 'react';
-
 import {StyleSheet} from 'react-native';
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 
 import {
+  ViroScene,
+  ViroText,
+  Viro360Image,
+  ViroAnimations,
   ViroARScene,
   ViroSurface,
-  ViroText,
-  ViroFlexView,
   ViroButton,
   ViroMaterials,
-  ViroBox,
+  ViroImage
 } from 'react-viro';
-import { SafeAreaView, StackNavigator } from 'react-navigation';
-import { Text, View, Button, Modal, StyleSheet } from 'react-native';
-const App = StackNavigator({
-  Home: { screen: HomeScreen },
-  Profile: { screen: ProfileScreen },
-});
 
-export default class MyComponent extends Component {
-  state = {
-    modalVisible: false,
-  };
+var createReactClass = require('create-react-class');
 
-  openModal() {
-    this.setState({modalVisible:true});
-  }
-
-  closeModal() {
-    this.setState({modalVisible:false});
-  }
-
-  render() {
-    return (
-        <View style={styles.container}>
-          <Modal
-              visible={this.state.modalVisible}
-              animationType={'slide'}
-              onRequestClose={() => this.closeModal()}
-          >
-            <View style={styles.modalContainer}>
-              <View style={styles.innerContainer}>
-                <Text>This is content inside of modal component</Text>
-                <Button
-                    onPress={() => this.closeModal()}
-                    title="Close modal"
-                >
-                </Button>
-              </View>
-            </View>
-          </Modal>
-          <Button
-              onPress={() => this.openModal()}
-              title="Open modal"
-          />
-        </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  modalContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: 'grey',
-  },
-  innerContainer: {
-    alignItems: 'center',
-  },
-});
-
-export default class HelloWorldSceneAR extends Component {
-
-  constructor() {
-    super();
-
-    // Set initial state here
-    this.state = {
-      text : "Initializing AR..."
+var HelloWorldScene = createReactClass({
+  getInitialState() {
+    return {
+      text : "Cheetos"
     };
-
-    // bind 'this' to functions
-    this._onInitialized = this._onInitialized.bind(this);
-  }
-  static navigationOptions = {
-    title: 'Welcome',
-  };
-  render() {
-    const { navigate } = this.props.navigation;
+  },
+  toggleHidden () {
+    this.setState({
+      isHidden: !this.state.isHidden
+    })
+  },
+  render: function() {
     return (
-      <ViroARScene onTrackingInitialized={this._onInitialized} >
+      <ViroARScene onTrackingInitialized={this._onInitialized} onTouch={this._onSceneClick}>
 
-        <ViroText text={this.state.text} scale={[.3, .3, .3]} position={[0, 0, -1.0]} style={{fontFamily:"Helvetica", fontSize:30, color:"#000000"}} opacity={1.0} rotation={[0,-30,0]} visible=false/>
-        <ViroSurface height={0.4} width={0.4} materials={["earth"]} position={[0,0,-1.1]} opacity={0.6} rotation={[0,-30,0]} visible=false/>
+        <ViroText text={this.state.text} scale={[.1, .1, .1]} position={[0.0, 0.06, -1.0]} style={{fontFamily:"Helvetica", fontSize:40, color:"#000000", textAlign: "center"}} opacity={1.0} rotation={[0,-30,0]} visible={true}/>
+
+        <ViroSurface height={0.4} width={0.4} materials={["earth"]} position={[0,0,-1.1]} opacity={0.6} rotation={[0,-30,0]} visible={true}/>
+        <ViroImage
+          placeholderSource={require("./res/stars.png")}
+          source={{uri:"https://my_s3_image.jpg"}}
+          position={[0.0,-0.04,-0.95]}
+          rotation={[0,-30,0]}
+          scale={[.3, .1, .1]}
+        />
         <ViroButton
             source={require("./res/button.jpg")}
             hoverSource={require("./res/hovered.jpg")}
@@ -114,71 +70,122 @@ export default class HelloWorldSceneAR extends Component {
           navigate('MyModal', { name: 'Jane' })
         }
         <ViroButton
-            source={require("./res/button.jpg")}
-            hoverSource={require("./res/hovered.jpg")}
-            clickSource={require("./res/clicked.jpg")}
-            position={[0.0, -0.13, -1.0]}
-            rotation={[0, -30, 0]}
-            height={0.2}
-            width={0.3}
-            onTap={this._onButtonTap("close")}
-            onGaze={this._onButtonGaze} />
-            visible=false
+        source={require("./res/button.jpg")}
+        hoverSource={require("./res/hovered.jpg")}
+        clickSource={require("./res/clicked.jpg")}
+        position={[0.0, -0.13, -1.0]}
+        rotation={[0, -30, 0]}
+        height={0.2}
+        width={0.3}
+        onTap={this._onButtonTap("exit")}
+        onGaze={this._onButtonGaze("exit")}
+        visible={true} />
 
       </ViroARScene>
     );
-  }
-
-  _onInitialized() {
-    this.setState({
-      text : ""
-    });
-  }
-  //outside of render method
-  _onButtonGaze(objectTag) {
-      this.setState({
-          buttonStateTag: "onGaze"
-      });
-  }
-  _onButtonTap(objectTag) {
-      this.setState({
-          buttonStateTag: "onTap"
-      });
-      if(objectTag == "buy")
+  },
+  _onButtonTap(ButtonType) {
+      if(ButtonType == "buy")
       {
-        //server call
+        console.log("buy");
       }
-      if(objectTag == "close")
+  },
+  _onButtonGaze(ButtonType) {
+      if(ButtonType == "buy")
       {
-
+        console.log("buy_gaze");
       }
-  }
-  _onTouch(state, touchPos, source)  {
-   var touchX = touchPos[0];
-   var touchY = touchPos[1];
-    if(state == 1) {
-      this.setState({
+  },
+  _onSceneClick(state, touchPos, source){
+    if(state == 3)
+    {
 
-      })
     }
   }
 
+});
+class MyComponent extends React.Component {
+  constructor() {
+    super();
 
+    this.state = {
+      modalIsOpen: false
+    };
 
-var styles = StyleSheet.create({
-  helloWorldTextStyle: {
-    fontFamily: 'Arial',
-    fontSize: 30,
-    color: '#ffffff',
-    textAlignVertical: 'center',
-    textAlign: 'center',
-  },
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
+
+  afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    this.subtitle.style.color = '#f00';
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.openModal}>Open Modal</button>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+
+          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+          <button onClick={this.closeModal}>close</button>
+          <div>I am a modal</div>
+	  <div>Bags of Apples</div>
+	  <div>2 Bananas</div>
+          <form>
+            <input />
+            <button>tab navigation</button>
+            <button>stays</button>
+            <button>inside</button>
+            <button>the modal</button>
+          </form>
+        </Modal>
+      </div>
+    );
+  }
+}
+
+const ItemChild = () => (
+<div className='modal'>
+      Hello, World!
+  </div>
+)
+
+ViroAnimations.registerAnimations({
+  showImage:{properties:{scaleX:1, scaleY:1, scaleZ:1, opacity: 1},
+        easing:"EaseOut", duration: 5000}
+});
+
+ViroAnimations.registerAnimations({
+  dissapearImage:{properties:{scaleX:0, scaleY:0, scaleZ:0, opacity: 0},
+        easing:"EaseOut", duration: 1000}
 });
 ViroMaterials.createMaterials({
   earth: {
-    shininess: 2.0,
-    lightingModel: "Constant",
-  }
+     lightingModel: "Constant"
+   },
+});
+var styles = StyleSheet.create({
+  helloWorldTextStyle: {
+    fontFamily: 'HelveticaNeue-Medium',
+    fontSize: 40,
+    color: '#ffffff',
+  },
 });
 
-module.exports = HelloWorldSceneAR;
+module.exports = HelloWorldScene;
