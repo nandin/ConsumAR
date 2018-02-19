@@ -14,6 +14,67 @@ import {
   ViroBox,
 } from 'react-viro';
 import { SafeAreaView, StackNavigator } from 'react-navigation';
+import { Text, View, Button, Modal, StyleSheet } from 'react-native';
+const App = StackNavigator({
+  Home: { screen: HomeScreen },
+  Profile: { screen: ProfileScreen },
+});
+
+export default class MyComponent extends Component {
+  state = {
+    modalVisible: false,
+  };
+
+  openModal() {
+    this.setState({modalVisible:true});
+  }
+
+  closeModal() {
+    this.setState({modalVisible:false});
+  }
+
+  render() {
+    return (
+        <View style={styles.container}>
+          <Modal
+              visible={this.state.modalVisible}
+              animationType={'slide'}
+              onRequestClose={() => this.closeModal()}
+          >
+            <View style={styles.modalContainer}>
+              <View style={styles.innerContainer}>
+                <Text>This is content inside of modal component</Text>
+                <Button
+                    onPress={() => this.closeModal()}
+                    title="Close modal"
+                >
+                </Button>
+              </View>
+            </View>
+          </Modal>
+          <Button
+              onPress={() => this.openModal()}
+              title="Open modal"
+          />
+        </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: 'grey',
+  },
+  innerContainer: {
+    alignItems: 'center',
+  },
+});
 
 export default class HelloWorldSceneAR extends Component {
 
@@ -28,8 +89,11 @@ export default class HelloWorldSceneAR extends Component {
     // bind 'this' to functions
     this._onInitialized = this._onInitialized.bind(this);
   }
-
+  static navigationOptions = {
+    title: 'Welcome',
+  };
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <ViroARScene onTrackingInitialized={this._onInitialized} >
 
@@ -46,6 +110,9 @@ export default class HelloWorldSceneAR extends Component {
             onTap={this._onButtonTap("buy")}
             onGaze={this._onButtonGaze} />
             visible=false
+            onPress={() =>
+          navigate('MyModal', { name: 'Jane' })
+        }
         <ViroButton
             source={require("./res/button.jpg")}
             hoverSource={require("./res/hovered.jpg")}

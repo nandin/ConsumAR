@@ -71,7 +71,7 @@ def load_labels(label_file):
   return label
 
 
-def m_func(f_name):
+if __name__ == "__main__":
   file_name = "tensorflow/examples/label_image/data/grace_hopper.jpg"
   model_file = \
     "tensorflow/examples/label_image/data/inception_v3_2016_08_28_frozen.pb"
@@ -95,17 +95,24 @@ def m_func(f_name):
   parser.add_argument("--output_layer", help="name of output layer")
   args = parser.parse_args()
 
-  model_file = "/Users/Sidhu/Desktop/output_graph.pb"
-  input_layer = "Mul"
-  file_name = f_name
-  label_file = "/tmp/output_labels.txt"
+  if args.graph:
+      model_file = args.graph
+  if args.image:
+      file_name = args.image
+  if args.labels:
+      label_file = args.labels
   if args.input_height:
-    input_height = args.input_height
+      input_height = args.input_height
   if args.input_width:
-    input_width = args.input_width
-  input_mean = 128
-  input_std = 128
-  output_layer = "final_result"
+      input_width = args.input_width
+  if args.input_mean:
+      input_mean = args.input_mean
+  if args.input_std:
+      input_std = args.input_std
+  if args.input_layer:
+      input_layer = args.input_layer
+  if args.output_layer:
+      output_layer = args.output_layer
 
   graph = load_graph(model_file)
   t = read_tensor_from_image_file(
@@ -128,5 +135,6 @@ def m_func(f_name):
 
   top_k = results.argsort()[-5:][::-1]
   labels = load_labels(label_file)
+  print(top_k)
   for i in top_k:
     print(labels[i], results[i])
